@@ -1,0 +1,32 @@
+{
+  "name": "dansk_studio",
+  "version": "1.0.0",
+  "description": " Express,Handlebars,ES6+",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NerovnuiMihail/dansk_studio.git"
+  },
+  "keywords": [
+    "Express",
+    "Handlebars",
+    "ES6+"
+  ],
+  "author": "NerovnuiMihail (nmy-webdev)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NerovnuiMihail/dansk_studio/issues"
+  },
+  "homepage": "https://github.com/NerovnuiMihail/dansk_studio#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
