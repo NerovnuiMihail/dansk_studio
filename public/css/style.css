@@ -12,6 +12,7 @@
 
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
+a{color: inherit;}
 
 nav,footer,header,aside{display: block;}
 
@@ -39,7 +40,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-.content-wrap {
+.content-wrap{
     width: 1376px;
 }
 .main{
@@ -481,6 +482,7 @@ body {
     height: 84px;
 }
 .utils-card__btn{
+    cursor: pointer;
     margin-top: 17px;
     display: flex;
     justify-content: center;
@@ -699,6 +701,7 @@ body {
     margin-bottom: 23px;
 }
 .date-form__description-btn{
+    cursor: pointer;
     font-weight: 600;
     font-size: 22px;
     line-height: 26px;
@@ -758,4 +761,126 @@ body {
 .main-line{
     width: 1920px;
     border: 3px solid #F4E8DA;
+}
+
+
+/* ***********************ABOUTME PAGE************************** */
+
+
+.aboutme-wrapper{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.top-title-aboutme{
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #0C58C9;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 65px;
+}
+.aboutme-education{
+    display: flex;
+    flex-direction: column;
+}
+.education-aboutme{
+    margin-bottom: 54px;
+}
+.aboutme-courses{
+    margin-bottom: 54px;
+}
+.aboutme-courses__title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 107%;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+/* .aboutme-courses__list{} */
+.aboutme-courses__item{
+    margin-left: 23px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+.business{
+    display: flex;
+    flex-direction: column;
+}
+.business__title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 107%;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+.business__items{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 57px;
+}
+.aboutme-btns{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 59px;
+}
+.aboutme-btns__left{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 438px;
+    height: 68px;
+    background: #F4E8DA;
+    border: 1px solid #ECBF2E;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-right: 60px;
+}
+.aboutme-btns__right{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 521px;
+    height: 68px;
+    background: #FFFFFF;
+    border: 3px solid #ECBF2E;
+    box-sizing: border-box;
+    box-shadow: -4px -4px 20px #F4E8DA, 4px 4px 20px #F4E8DA;
+    border-radius: 20px;
+}
+.aboutme-imgs{
+    position: relative;
+}
+.aboutme-imgs__bg{
+    position: absolute;
+    width: 672px;
+    height: 589px;
+    top: -650px;
+    right: -135px;
+    z-index: 1;
+}
+.aboutme-imgs__photo{
+    position: absolute;
+    width: 450px;
+    height: 609px;
+    top: -810px;
+    right: 10px;
+    z-index: 2;
 }

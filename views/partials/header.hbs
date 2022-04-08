@@ -8,13 +8,49 @@
         <div class="logo__title">студия изучения датского языка</div>
     </div>
     <nav class="header__nav">
-        <div class="nav-item active-item">Главная</div>
-        <div class="nav-item">Обо мне</div>
-        <div class="nav-item">Услуги</div>
-        <div class="nav-item">Участие и оплата</div>
-        <div class="nav-item">Как записаться</div>
-        <div class="nav-item">Контакты</div>
-        <div class="nav-item">Отзывы</div>
+
+        {{#if isHome}}
+            <div class="nav-item active-item"><a href="/">Главная</a></div>
+        {{else}}
+            <div class="nav-item"><a href="/">Главная</a></div>
+        {{/if}}
+
+        {{#if isAboutme}}
+            <div class="nav-item active-item"><a href="/aboutme">Обо мне</a></div>
+        {{else}}
+            <div class="nav-item"><a href="/aboutme">Обо мне</a></div>
+        {{/if}}
+
+        {{#if isUtils}}
+            <div class="nav-item active-item">Услуги</div>
+        {{else}}
+            <div class="nav-item">Услуги</div>
+        {{/if}}
+
+        {{#if isPay}}
+            <div class="nav-item active-item">Участие и оплата</div>
+        {{else}}
+            <div class="nav-item">Участие и оплата</div>
+        {{/if}}
+
+        {{#if isEnroll}}
+            <div class="nav-item active-item">Как записаться</div>
+        {{else}}
+            <div class="nav-item">Как записаться</div>
+        {{/if}}
+
+        {{#if isContacts}}
+            <div class="nav-item active-item">Контакты</div>
+        {{else}}
+            <div class="nav-item">Контакты</div>
+        {{/if}}
+
+        {{#if isReview}}
+        <div class="nav-item active-item">Отзывы</div>
+        {{else}}
+            <div class="nav-item">Отзывы</div>
+        {{/if}}
+        
     </nav>
     <div class="header__social">
         <img src="/img/header/Telegram App.png" alt="Telegram" class="header__social-img">
