@@ -500,24 +500,6 @@ body {
     line-height: 26px;
     text-transform: uppercase;
 }
-.utils__imgs{
-    position: absolute;
-    z-index: 1;
-}
-.utils__imgs-left{
-    width: 433.94px;
-    height: 432.28px;
-    position: absolute;
-    left: 0;
-    top: 109px;
-}
-.utils__imgs-right{
-    width: 481.65px;
-    height: 432.29px;
-    position: absolute;
-    top: 14px;
-    left: 1389px;
-}
 
 
 /* FIRST STEP */
@@ -1092,8 +1074,9 @@ body {
     line-height: 107%;
 }
 
-
 /* ****** WORKANDPAY ****** */
+
+
 .workandpay{
     margin: 0 auto;
     display: flex;
@@ -1226,4 +1209,70 @@ body {
     box-sizing: border-box;
     border-radius: 8px;
     margin-right: 5px;
+}
+
+
+/* **** **** ADMIN **** ****  */
+
+
+.admin-wrapper{
+    margin: 60px auto;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.addservices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #F4E8DA;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 30px;
+}
+.addservices h2{
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #0C58C9;
+    margin-bottom: 20px;
+}
+.addservices input{
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 800px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.addservices button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 3px solid #00a2ff;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 3px #00a2ff;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.addservices select{
+    width: 400px;
+    height: 35px;
+    margin-bottom: 20px;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
 }

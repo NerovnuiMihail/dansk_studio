@@ -24,7 +24,8 @@
   "homepage": "https://github.com/NerovnuiMihail/dansk_studio#readme",
   "dependencies": {
     "express": "^4.17.3",
-    "express-handlebars": "^6.0.4"
+    "express-handlebars": "^6.0.4",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
