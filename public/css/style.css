@@ -884,3 +884,346 @@ body {
     right: 10px;
     z-index: 2;
 }
+
+
+/* ******************* UTILS PAGE ***************** */
+
+
+.utils-container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-studio{
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #0C58C9;
+    margin-top: 60px;
+    margin-bottom: 44px;
+}
+.text-studio{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 88px;
+}
+.text-studio span{
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #C90C31;
+}
+.utilits-tab{
+    margin-bottom: 107px;
+}
+.tab{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tab-active{
+    border: 2px solid #F4E8DA;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+.tab__item{
+    cursor: pointer;
+    padding-top: 28px;
+    width: 383px;
+    height: 222px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.tab__item:hover{
+    border: 2px solid #F4E8DA;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.tab__img{
+    width: 84px;
+    height: 84px;
+    margin-bottom: 27px;
+}
+.tab_title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 107%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.utils-btns-wrapper{
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 83px;
+}
+.utils-btn-date{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 308px;
+    height: 68px;
+    background: #F4E8DA;
+    border: 1px solid #ECBF2E;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-right: 80px;
+}
+.utils-btn-course{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 406px;
+    height: 68px;
+    background: #FFFFFF;
+    border: 3px solid #ECBF2E;
+    box-sizing: border-box;
+    box-shadow: -4px -4px 20px #F4E8DA, 4px 4px 20px #F4E8DA;
+    border-radius: 20px;
+}
+.utils-tab-content{
+    display: flex;
+    flex-direction: column;
+}
+.tab-content__item{
+    display: flex;
+    flex-direction: column;
+}
+.tab-content__title-author{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 107%;
+    text-transform: uppercase;
+    color: #C90C31;
+    margin-bottom: 30px;
+}
+.tab-content__text-author{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    margin-bottom: 50px;
+}
+.tab-content__description-author{
+    display: flex;
+    flex-direction: column;
+}
+.tab-content__description-author p{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 107%;
+    margin-bottom: 22px;
+}
+.tab-content__description-author span{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 107%;
+    margin-bottom: 40px;
+}
+.tab-content__text-ind{
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.tab-content__text-ind span{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 107%;
+    text-transform: uppercase;
+    color: #C90C31;
+}
+.tab-content__cost-ind{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 107%;
+}
+.tab-content__cost-ind p{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 107%;
+}
+.tab-content__cost-ind p:not(:first-child,:last-child){
+    margin-bottom: 22px;
+}
+.group-bold,.group-bold-mb{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 107%;
+    margin-bottom: 30px;
+}
+.group-bold-mb{
+    margin-bottom: 60px;
+}
+.group-text-mb{
+    margin-bottom: 25px;
+}
+.group-text-bold-norm{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+}
+.group-text-bold-norm span{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 107%;
+}
+
+
+/* ****** WORKANDPAY ****** */
+.workandpay{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+.workandpay__title{
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 51px;
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #0C58C9;
+}
+.workandpay__text{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+.workandpay__text p{
+    margin-bottom: 30px;
+}
+.workandpay__text p:nth-child(2){
+    margin-bottom: 50px;
+}
+.workandpay__text p:nth-child(3){
+    margin-bottom: 50px;
+}
+.workandpay__text p:nth-child(5){
+    margin-bottom: 50px;
+}
+
+
+/* ****** ENROLL ****** */
+
+
+.enroll{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 53px;
+}
+.enroll__title{
+    margin-top: 60px;
+    margin-bottom: 64px;
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #0C58C9;
+}
+.enroll__subtitle{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.enroll__form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 79px;
+}
+.enroll__form label{
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 53px;
+}
+.enroll__form input{
+    margin-top: 14px;
+    width: 1313px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 15px;
+}
+.enroll__form-text{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 22px;
+}
+.enroll__form-text-bold{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 22px;
+}
+.enroll__form button{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 68px;
+    background: #FFFFFF;
+    border: 3px solid #ECBF2E;
+    box-sizing: border-box;
+    box-shadow: -4px -4px 20px #F4E8DA, 4px 4px 20px #F4E8DA;
+    border-radius: 20px;
+}
+.enroll__form-check{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+.enroll__form-check input{
+    margin-top: 0;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid #3D3F42;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-right: 5px;
+}
