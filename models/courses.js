@@ -39,11 +39,34 @@ class Courses {
             const nameDB = Object.keys(item)[0];
 
             if (nameDB === coursName) {
-                const arr = item[coursName].map(item => item);
-                arr.push(data);
-                const obj = {};
-                obj[coursName] = arr;
-                newDB.push(obj);
+                let searchIndexCourse;
+                item[coursName].forEach((cours,idx) => {
+                    if (cours.title === data.title) {
+                        searchIndexCourse = idx;
+                    }
+                });
+
+                if (searchIndexCourse == undefined) {
+                    const arr = item[coursName].map(item => item);
+                    const obj = {
+                        title: data.title,
+                        time: [data.time],
+                        cost: [data.cost],
+                        id: [data.id]
+                    };
+                    arr.push(obj);
+                    const newObj = {};
+                    newObj[coursName] = arr;
+                    newDB.push(newObj);
+                } else {
+                    const arr = item[coursName].map(item => item);
+                    arr[searchIndexCourse].time.push(data.time);
+                    arr[searchIndexCourse].cost.push(data.cost);
+                    arr[searchIndexCourse].id.push(data.id);
+                    const newObj = {};
+                    newObj[coursName] = arr;
+                    newDB.push(newObj);
+                }
             } else {
                 newDB.push(item);
             }

@@ -37,6 +37,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 
 
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -106,8 +107,11 @@ body {
     color: #3D3F42;
 }
 .header__nav{
+    width: 985px;
+    height: 40px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-right: 63px;
 }
 .nav-item{
@@ -115,9 +119,9 @@ body {
     font-size: 20px;
     line-height: 23px;
 }
-.header__nav .nav-item:not(:last-child){
+/* .header__nav .nav-item:not(:last-child){
     margin-right: 38px;
-}
+} */
 .active-item{
     font-weight: 600;
 }
@@ -309,9 +313,9 @@ body {
 }
 .oboutme__line{
     position: absolute;
-    width: 828px;
+    width: 808px;
     border: 4px solid #F4E8DA;
-    left: -265px;
+    left: -255px;
 }
 .oboutme__title{
     font-weight: 800;
@@ -422,6 +426,20 @@ body {
 .utils__wrapp{
     position: relative;
 }
+.utils__imgs{
+    position: absolute;
+    display: flex;
+}
+.utils__imgs-left{
+    position: absolute;
+    z-index: 1;
+    bottom: -540px;
+}
+.utils__imgs-right{
+    position: absolute;
+    z-index: 1;
+    right: -1860px;
+}
 .utils__title{
     margin-left: 272px;
     display: flex;
@@ -441,7 +459,7 @@ body {
     border: 4px solid #F4E8DA;
     position: absolute;
     top: 38px;
-    left: 580px;
+    left: 560px;
 }
 .utils__content{
     display: flex;
@@ -524,11 +542,11 @@ body {
     color: #0C58C9;
 }
 .first-step__title-line{
-    width: 828px;
+    width: 800px;
     border: 4px solid #F4E8DA;
     position: absolute;
     top: 38px;
-    left: 0;
+    left: 20px;
 }
 .first-step__content{
     margin: 0 auto;
@@ -628,7 +646,7 @@ body {
     position: absolute;
     width: 1060px;
     top: 19px;
-    left: 580px;
+    left: 570px;
     border: 4px solid #F4E8DA;
 }
 .date__content{
@@ -716,6 +734,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 80px;
+    margin-left: 15px;
 }
 .review__title-text{
     font-weight: 800;
@@ -741,7 +760,7 @@ body {
     margin-right: 20px;
 }
 .main-line{
-    width: 1920px;
+    width: 1890px;
     border: 3px solid #F4E8DA;
 }
 
@@ -1275,4 +1294,108 @@ body {
     box-sizing: border-box;
     border-radius: 10px;
     text-align: center;
+}
+
+
+/* ******************************** MODALS ******************************** */
+
+
+.questionnaire, .freelesson{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 662px;
+    height: 341px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    border: 2px solid #F4E8DA;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.questionnaire, .freelesson a{
+    display: block;
+    margin-bottom: 65px;
+}
+.questionnaire__title, .freelesson__title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 70px;
+    margin-bottom: 48px;
+}
+.questionnaire__title {
+    display: none;
+}
+.questionnaire__btn{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 296px;
+    height: 68px;
+    background: #FFFFFF;
+    border: 3px solid #ECBF2E;
+    box-sizing: border-box;
+    box-shadow: -4px -4px 20px rgba(244, 232, 218, 0.1), 4px 4px 20px rgba(244, 232, 218, 0.1);
+    border-radius: 20px;
+}
+.questionnaire__img{
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 626px;
+    top: 6px;
+}
+.overflowblack{
+    display: none;
+    margin: auto;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+.freelesson{
+    display: none;
+    width: 750px;
+    height: 600px;
+}
+.freelesson .questionnaire__img{
+    position: absolute;
+    top: 10px;
+    left: 705px;
+}
+.freelesson a{
+    margin-top: 40px;
+}
+.freelesson form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.freelesson input{
+    width: 500px;
+    padding: 15px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.freelesson input:not(:last-child){
+    margin-bottom: 20px;
 }

@@ -7,6 +7,7 @@ const utilsRouter = require('./routes/utils');
 const workandpayRouter = require('./routes/workandpay');
 const enrollRouter = require('./routes/enroll');
 const admin = require('./routes/admin');
+const API = require('./routes/API');
 
 
 const app = express();
@@ -25,6 +26,7 @@ app.use('/utils', utilsRouter);
 app.use('/workandpay', workandpayRouter);
 app.use('/enroll', enrollRouter);
 app.use('/admin', admin);
+app.use('/api', API);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server started an: http://localhost:${PORT}`));
