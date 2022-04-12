@@ -1,4 +1,16 @@
 <main class="main">
+    <div class="freelesson">
+        <form name="freelesson__form">
+            <div class="freelesson__title">Первый пробный урок в Dansk Studio со скидкой 50%! <br> Для любого уровня от новичка до продвинутого</div>
+            <div class="freelesson__img"><img src="/img/Close.png" alt="Close"></div>
+            <input type="text" name="name" placeholder="Имя">
+            <input type="email" name="email" placeholder="Почта">
+            <input type="tel" name="tel" placeholder="Телефон">
+            <div class="freelesson__btn">записаться</div>   
+            <div class="freelesson__response"></div>
+        </form>
+    </div>
+
     <section class="test-online content-wrap">
         <div class="test-online__wrapper">
             <div class="test-online__title">ХОТИТЕ ИЗУЧИТЬ ДАТСКИЙ ЯЗЫК?</div>
@@ -71,6 +83,15 @@
             </div>
         </div>
     </section>
+
+    <div class="overflowblack">
+        <div class="questionnaire">
+            <div class="questionnaire__title">Заполните нашу анкету на определение <br> уровня владения языком и мы поможем <br> подобрать вам обучающий курс</div>
+            <a href="/questionnaire"><div class="questionnaire__btn">заполнить анкету</div></a>
+            <img src="/img/Close.png" alt="Close" class="questionnaire__img">
+        </div>
+    </div>
+
     <section class="utils">
         <div class="utils__title">
             <div class="utils__title-text">Какие услуги <br> предлагает студия</div>
@@ -168,6 +189,3 @@
         </div>
     </section>
 </main>
-
-{{>modalFreeLesson}}
-{{>modalQuestion}}
