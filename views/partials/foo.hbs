@@ -1,10 +1,18 @@
-<script src="/js/app.js"></script>
+
+{{#if isHome}}
+    <script src="/js/modalFreeLesson.js"></script>
+{{else}}
+{{/if}}
+
+{{#if isAboutme}}
+    <script src="/js/modalFreeLesson.js"></script>
+{{else}}
+{{/if}}
 
 {{#if isUtils}}
     <script src="/js/utilspage.js"></script>
 {{else}}
 {{/if}}
-
 
 {{#if isAdmin}}
     <script src="/js/admin.js"></script>
