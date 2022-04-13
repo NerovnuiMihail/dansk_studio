@@ -161,17 +161,18 @@
         </div>
         <div class="date__content">
             <div class="date__content-title">Перед оплатой курса узнайте, есть ли места в группе, не возникло ли переноса или отмены занятий</div>
-            <form action="#" class="date__content-form date-form">
+            <form name="homeScheduleForm" class="date__content-form date-form">
                 <div class="date-form__inputs">
-                    <label>Ваше имя*<input type="text" name="name" class="date-form__inp"></label>
-                    <label>Ваш e-mail*<input type="email" name="email" class="date-form__inp"></label>
-                    <label>Ваш телефон*<input type="tel" name="phone" class="date-form__inp"></label>
+                    <label>Ваше имя*<input type="text" name="name" class="date-form__inp" required></label>
+                    <label>Ваш e-mail*<input type="email" name="email" class="date-form__inp" required></label>
+                    <label>Ваш телефон*<input type="tel" name="phone" class="date-form__inp" required></label>
                     <label>Ваш Skype<input type="text" name="skype" class="date-form__inp"></label>
                 </div>
+                <div class="schedule__message"></div>
                 <div class="date-form__description">
                     <div class="date-form__description-text">* Поля, отмеченные звездочкой, являются <br> обязательными для заполнения</div>
                     <div class="date-form__description-text">Нажимая кнопку, вы даете согласие на обработку <br> своих персональных данных</div>
-                    <div class="date-form__description-btn">отправить</div>
+                    <div class="date-form__description-btn schedule__submit-btn">отправить</div>
                 </div>
             </form>
         </div>

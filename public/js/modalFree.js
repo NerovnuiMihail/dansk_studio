@@ -8,6 +8,7 @@ const responseMessage = document.querySelector('.freelesson__response');
 const formContainer = document.forms.freelesson__form;
 const URL = 'http://localhost:3000/freelesson';
 
+
 homeOpenBtn.forEach(item => {
     item.addEventListener('click', () => {
         modalContainer.style.display = 'block';

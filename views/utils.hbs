@@ -73,7 +73,39 @@
         </div>
     </section>
     <section class="utils-btns-wrapper">
-        <div class="utils-btn-date">узнать расписание</div>
+        <div class="utils-btn-date scheduleOpenBtn">узнать расписание</div>
         <div class="utils-btn-course">выбрать курс и ЗАПИСАТЬСЯ</div>
     </section>
+    
+    <div class="schedule">
+        <form name="schedule_form">
+            <img src="/img/Close.png" alt="Close" class="schedule__close">
+            <div class="schedule__title">Перед оплатой курса узнайте, есть ли места в группе, не возникло ли переноса или отмены занятий</div>
+            <fieldset class="schedule__inputsPlace">
+                <input type="text" name="name" placeholder="Имя" class="schedule__inp" required>
+                <input type="email" name="email" placeholder="Email" class="schedule__inp" required>
+                <input type="tel" name="phone" placeholder="Телефон" class="schedule__inp" required>
+                <input type="text" name="skype" placeholder="Skype" class="schedule__inp"> 
+            </fieldset>
+            <div class="schedule__messagePlace"></div>
+            <button type="submit" class="schedule__btn">Отправить</button>
+        </form>
+    </div>
+
+    <div class="services-utils">
+        <form name="services_utils">
+            <img src="/img/Close.png" alt="Close" class="services-utils__close">
+            <fieldset>
+                <label for="coursename">Выберите курс</label>
+                <select name="coursename" id="coursename"></select>
+                <label for="time">Выберите время</label>
+                <select name="time" id="time"></select>
+            </fieldset>
+            <fieldset>
+                <p>Продолжительность: индивидуальное количество, уроки 60-70мин</p>
+                <p>Cтоимость: 600 крон за занятие</p>
+            </fieldset>
+            <button type="submit">оплатить</button>
+        </form>
+    </div>
 </main>

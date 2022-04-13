@@ -1,5 +1,7 @@
 const path = require('path');
 const {Router} = require('express');
+const Lessons = require('../models/lessons');
+const Schedule = require('../models/schedule');
 const router = Router();
 
 router.get('/', (req, res) => {
@@ -14,7 +16,14 @@ router.get('/questionnaire', (req, res) => {
 });
 
 router.post('/freelesson', async (req, res) => {
-    console.log(req.body);
+    const lesson = new Lessons(req.body.name, req.body.email, req.body.tel);
+    await Lessons.addLesson(lesson.profileLesson());
+    res.redirect('/utils');
+});
+
+router.post('/schedule', async (req, res) => {
+    const schedule = new Schedule(req.body.name, req.body.email, req.body.tel, req.body.skype);
+    await Schedule.addSchedule(schedule.profileSchedule());
     res.redirect('/utils');
 });
 
