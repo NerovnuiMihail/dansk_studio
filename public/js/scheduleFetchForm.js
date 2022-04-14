@@ -1,10 +1,33 @@
-'use strict';
-
 const messagePlace = document.querySelector('.schedule__message');
 const inputsPlace = document.querySelector('.date-form__inputs');
 const homeSubmitBtn = document.querySelector('.schedule__submit-btn');
+const modalWrapper = document.querySelector('.overflowblack');
 const homeFormSchedule = document.forms.homeScheduleForm;
-const URL = 'http://localhost:3000/schedule';
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const openModal = entry.target
+            setTimeout(() => {
+                modalWrapper.style.display = 'block';
+            }, 10000);
+            observer.unobserve(openModal)
+        }
+    })
+}, {threshold: 1});
+
+observer.observe(document.querySelector('.utils'));
+
+modalWrapper.addEventListener('click', (e) => {
+    if(e.target.classList.contains('questionnaire__img') || e.target.classList.contains('overflowblack')) {
+        modalWrapper.style.display = 'none';
+    }
+});
+
+homeSubmitBtn.addEventListener('click', () => {
+    scheduleFetch();
+    homeFormSchedule.reset();
+});
 
 function setSchedule() {
     const name = homeFormSchedule.elements.name.value;
@@ -20,13 +43,10 @@ function setSchedule() {
     }
 }
 
-homeSubmitBtn.addEventListener('click', () => {
-    scheduleFetch();
-    homeFormSchedule.reset();
-});
-
 async function scheduleFetch() {
+    const URL = 'http://localhost:3000/schedule';
     const data = setSchedule();
+    
     const response = await fetch(URL, {
         method: 'POST',
         headers: {

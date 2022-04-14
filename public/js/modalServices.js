@@ -27,6 +27,8 @@ clearTab();
 hideTabItems();
 choiceTab(tabIdx);
 showTabItem(tabIdx);
+renderSelector(tabIdx);
+renderOptions(tabIdx);
 
 tabItems.forEach((item,idx) => {
     item.addEventListener('click', () => {
@@ -36,6 +38,9 @@ tabItems.forEach((item,idx) => {
 
         choiceTab(tabIdx);
         showTabItem(tabIdx);
+
+        renderSelector(tabIdx);
+        renderOptions(tabIdx);
     });
 });
 
@@ -55,10 +60,12 @@ servicesContainer.addEventListener('click', (e) => {
 
 const selectCourseName = document.querySelector('#coursename');
 const selectCourseTime = document.querySelector('#time');
+const descriptionContainer = document.querySelector('.services-utils__descriptionContainer');
 const tabNames = ['authors course','individual lesson','group lesson'];
 
 async function fetchSelectData(idx) {
-    const db = await fetch('http://localhost:3000/api');
+    const URL = 'http://localhost:3000/api';
+    const db = await fetch(URL);
     const dataApi = await db.json();
     return dataApi[idx];
 }
@@ -66,6 +73,8 @@ async function fetchSelectData(idx) {
 async function renderSelector(idx) {
     const dataApi = await fetchSelectData(idx);
     const data = dataApi[tabNames[idx]];
+    selectCourseName.innerHTML = '';
+
     console.log(data);
 
     data.forEach(item => {
@@ -76,4 +85,35 @@ async function renderSelector(idx) {
     });
 }
 
-renderSelector(1);
+async function renderOptions(idx) {
+    const dataApi = await fetchSelectData(idx);
+    const data = dataApi[tabNames[idx]];
+    const currentCourse = data.filter(item => item.title === selectCourseName.value)[0];
+    selectCourseTime.innerHTML = '';
+
+    currentCourse.time.forEach(item => {
+        const option = document.createElement('option');
+        option.textContent = item;
+        option.value = item;
+        selectCourseTime.append(option);
+
+
+        // if (idx !== 0) {
+        //     const option = document.createElement('option');
+        //     option.textContent = item;
+        //     option.value = item;
+        //     selectCourseTime.append(option);
+        // } else {
+        //     document.querySelector('.remTime').remove();
+        //     servicesForm.elements.time.remove();
+    
+        //     const p = document.createElement('p');
+        //     p.textContent = `Продолжительность: ${item}`;
+        //     servicesForm.elements[0].append(p);
+        // }
+    });
+}
+
+function renderDescription() {
+
+}

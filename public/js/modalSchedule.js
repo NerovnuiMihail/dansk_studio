@@ -1,7 +1,9 @@
-'use strict';
-
 const scheduleOpenBtn = document.querySelector('.scheduleOpenBtn');
 const scheduleContainer = document.querySelector('.schedule');
+const messagePlace = document.querySelector('.schedule__messagePlace');
+const inputsPlace = document.querySelector('.schedule__inputsPlace');
+const utilsSubmitBtn = document.querySelector('.schedule__btn');
+const utilsFormSchedule = document.forms.schedule_form;
 
 scheduleOpenBtn.addEventListener('click', () => {
     scheduleContainer.style.display = 'block';
@@ -12,14 +14,6 @@ scheduleContainer.addEventListener('click', (e) => {
         scheduleContainer.style.display = 'none';
     }
 });
-
-//////
-
-const messagePlace = document.querySelector('.schedule__messagePlace');
-const inputsPlace = document.querySelector('.schedule__inputsPlace');
-const utilsSubmitBtn = document.querySelector('.schedule__btn');
-const utilsFormSchedule = document.forms.schedule_form;
-const URL = 'http://localhost:3000/schedule';
 
 utilsFormSchedule.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -42,7 +36,9 @@ function setSchedule() {
 }
 
 async function scheduleFetch() {
+    const URL = 'http://localhost:3000/schedule';
     const data = setSchedule();
+
     const response = await fetch(URL, {
         method: 'POST',
         headers: {
