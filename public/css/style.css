@@ -679,6 +679,7 @@ body {
     flex-direction: column;
 }
 .date-form__inp{
+    padding: 10px 20px;
     margin-top: 10px;
     width: 346px;
     height: 66px;
