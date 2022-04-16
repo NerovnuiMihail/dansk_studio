@@ -18,13 +18,13 @@ router.get('/questionnaire', (req, res) => {
 router.post('/freelesson', async (req, res) => {
     const lesson = new Lessons(req.body.name, req.body.email, req.body.tel);
     await Lessons.addLesson(lesson.profileLesson());
-    res.redirect('/utils');
+    res.json(req.body);
 });
 
 router.post('/schedule', async (req, res) => {
     const schedule = new Schedule(req.body.name, req.body.email, req.body.tel, req.body.skype);
     await Schedule.addSchedule(schedule.profileSchedule());
-    res.redirect('/utils');
+    res.json(req.body);
 });
 
 module.exports = router

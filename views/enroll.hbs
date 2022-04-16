@@ -1,15 +1,15 @@
 <main class="enroll content-wrap">
     <div class="enroll__title">Анкета перед началом занятий</div>
-    <form action="#" method="post" class="enroll__form">
-        <label>С какой целью вы учите или планируете изучать датский язык? <input type="text" required> </label>
-        <label>Опишите  подробно свою языковую проблему. Чем я конкретно могу вам помочь?<input type="text" required> </label>
-        <label>Какой у вас уровень владения датским языком на данный момент? <input type="text" required> </label>
-        <label>Как долго вы изучаете датский язык? <input type="text" required> </label>
-        <label>Где вы раньше изучали датский- язык? (самостоятельно, языковая школа, с частным преподавателем) <input type="text" required> </label>
-        <label>Какими иностранными языками владеете и на каком уровне? <input type="text" required> </label>
-        <label>Какой был любимый предмет в школе? <input type="text" required> </label>
-        <label>Что вам даётся сложно при изучении датского языка или других иностранных языков? <br> (общение с носителями, письмо, произношение, понимание иностранной речи на слух, и т.д.) <input type="text" required> </label>
-        <label>Сколько времени (сколько часов в неделю) вы  можете выделять на выполнение домашних заданий ?  <input type="text" required> </label>
+    <form name="enroll__form" class="enroll__form">
+        <label>С какой целью вы учите или планируете изучать датский язык? <input type="text" name="target_learn"> </label>
+        <label>Опишите подробно свою языковую проблему. Чем я конкретно могу вам помочь?<input type="text" name="your_problem"> </label>
+        <label>Какой у вас уровень владения датским языком на данный момент? <input type="text" name="your_lvl"> </label>
+        <label>Как долго вы изучаете датский язык? <input type="text" name="how_long"> </label>
+        <label>Где вы раньше изучали датский- язык? (самостоятельно, языковая школа, с частным преподавателем) <input type="text" name="where_learn"> </label>
+        <label>Какими иностранными языками владеете и на каком уровне? <input type="text" name="another_language"> </label>
+        <label>Какой был любимый предмет в школе? <input type="text" name="which_type_school"> </label>
+        <label>Что вам даётся сложно при изучении датского языка или других иностранных языков? <br> (общение с носителями, письмо, произношение, понимание иностранной речи на слух, и т.д.) <input type="text" name="whats_hard"> </label>
+        <label>Сколько времени (сколько часов в неделю) вы  можете выделять на выполнение домашних заданий ?  <input type="text" name="how_match_time"> </label>
         <div class="enroll__form-text">Запишите свою речь в аудиосообщении или в видеосообщении (например, монолог о себе, чтение какого-либо текста), <br> запишите голосом сочинение на свободную тему.</div>
         <div class="enroll__form-text-bold">Вы можете оставить этот пункт анкеты для личной консультации (наш специалист с вами свяжется).</div>
         <div class="enroll__form-text">
@@ -18,12 +18,12 @@
             2)	Вы можете отправить аудио- или видео- запись и отправить на почту admin_api@gmail.com<br>
             3)	Можете отправить запись в мессенджер WhatsApp, Telegram <br>
         </div>
-        <label> <input type="file" name="" id=""> </label>
-        <label>Ваше имя * <input type="text" required> </label>
-        <label>Ваш E-mail * <input type="text" required> </label>
-        <label>Ваш номер телефона <input type="tel" required> </label>
-        <div class="enroll__form-check"><input type="checkbox" name="" required> Я согласен на обработку персональных данных</div>
-        <button type="submit">отправить</button>
+        <label> <input type="file" name="file"> </label>
+        <label>Ваше имя * <input type="text" name="name" required> </label>
+        <label>Ваш E-mail * <input type="email" name="email" required> </label>
+        <label>Ваш номер телефона <input type="tel" name="phone"> </label>
+        <div class="enroll__form-check"><input type="checkbox" name="checkbox" required> Я согласен на обработку персональных данных</div>
+        <button class="enroll__form-submit">отправить</button>
     </form>
-    <div class="enroll__subtitle">Спасибо! Мы скоро с вами свяжемся и предложим лучшую программу в соответствии с вашим уровнем <br> владения языка</div>
+    <div class="enroll__subtitle"></div>
 </main>

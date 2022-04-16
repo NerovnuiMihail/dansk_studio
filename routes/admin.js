@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
 });
 
 router.post('/services', async (req,res) => {
-    // console.log(req.body.name);
     const data = new Courses(req.body.title, req.body.time, req.body.cost);
     await Courses.addCourse(data.profileCourse(), req.body.name);
 
