@@ -124,10 +124,23 @@ async function renderQuestionnaire() {
             <div><span>Email:</span> ${item.email}</div>
             <div><span>Телефон:</span> ${item.phone}</div>
             <input type="hidden" value="${item.id}">
-            <a href="http://localhost:3000/api/questionnaire/${item.id}">Подробнее</a>
+            <a href="/api/questionnaire/${item.id}">Подробнее</a>
         `;
         questionnaireContentWrapper.append(div);
     });
+}
+
+function hidenDisplay(hideElem,showElem,containerElem) {
+    showElem.style.display = 'block';
+    hideElem.style.display = 'none';
+    containerElem.style.display = 'none';
+    containerElem.innerHTML = '';
+}
+
+function showDisplay(hideElem,showElem,containerElem) {
+    hideElem.style.display = 'block';
+    showElem.style.display = 'none';
+    containerElem.style.display = 'flex';
 }
 
 addServicesForm.addEventListener('submit', (e) => {
@@ -138,46 +151,28 @@ addServicesForm.addEventListener('submit', (e) => {
 });
 
 lessonsShowBtn.addEventListener('click', () => {
-    lessonsShowBtn.style.display = 'none';
-    lessonsContentWrapper.style.display = 'flex';
-    lessonsHideBtn.style.display = 'block';
-
+    showDisplay(lessonsHideBtn,lessonsShowBtn,lessonsContentWrapper);
     renderLessons();
 });
 
 lessonsHideBtn.addEventListener('click', () => {
-    lessonsShowBtn.style.display = 'block';
-    lessonsContentWrapper.style.display = 'none';
-    lessonsContentWrapper.innerHTML = '';
-    lessonsHideBtn.style.display = 'none';
+    hidenDisplay(lessonsHideBtn,lessonsShowBtn,lessonsContentWrapper);
 });
 
 scheduleShowBtn.addEventListener('click', () => {
-    scheduleShowBtn.style.display = 'none';
-    scheduleContentWrapper.style.display = 'flex';
-    scheduleHideBtn.style.display = 'block';
-
+    showDisplay(scheduleHideBtn,scheduleShowBtn,scheduleContentWrapper);
     renderSchedule();
 });
 
 scheduleHideBtn.addEventListener('click', () => {
-    scheduleShowBtn.style.display = 'block';
-    scheduleContentWrapper.style.display = 'none';
-    scheduleContentWrapper.innerHTML = '';
-    scheduleHideBtn.style.display = 'none';
+    hidenDisplay(scheduleHideBtn,scheduleShowBtn,scheduleContentWrapper);
 });
 
 questionnaireShowBtn.addEventListener('click', () => {
-    questionnaireShowBtn.style.display = 'none';
-    questionnaireHideBtn.style.display = 'block';
-    questionnaireContentWrapper.style.display = 'flex';
-
+    showDisplay(questionnaireHideBtn,questionnaireShowBtn,questionnaireContentWrapper);
     renderQuestionnaire();
 });
 
 questionnaireHideBtn.addEventListener('click', () => {
-    questionnaireShowBtn.style.display = 'block';
-    questionnaireHideBtn.style.display = 'none';
-    questionnaireContentWrapper.style.display = 'none';
-    questionnaireContentWrapper.innerHTML = '';
+    hidenDisplay(questionnaireHideBtn,questionnaireShowBtn,questionnaireContentWrapper);
 });
