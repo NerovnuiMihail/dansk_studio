@@ -10,6 +10,7 @@ const observer = new IntersectionObserver((entries, observer) => {
             const openModal = entry.target
             setTimeout(() => {
                 modalWrapper.style.display = 'block';
+                document.body.style.overflow = 'hidden';
             }, 10000);
             observer.unobserve(openModal)
         }
@@ -21,6 +22,7 @@ observer.observe(document.querySelector('.utils'));
 modalWrapper.addEventListener('click', (e) => {
     if(e.target.classList.contains('questionnaire__img') || e.target.classList.contains('overflowblack')) {
         modalWrapper.style.display = 'none';
+        document.body.style.overflow = '';
     }
 });
 

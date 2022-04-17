@@ -116,11 +116,13 @@ tabItems.forEach((item,idx) => {
 
 openServicesBtn.addEventListener('click', () => {
     servicesContainer.style.display = 'block';
+    document.body.style.overflow = 'hidden';
 });
 
 servicesContainer.addEventListener('click', (e) => {
     if(e.target.classList.contains('services-utils__close') || e.target.classList.contains('services-utils')) {
         servicesContainer.style.display = 'none';
+        document.body.style.overflow = '';
     }
 });
 

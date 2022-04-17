@@ -12,18 +12,21 @@ const URL = 'http://localhost:3000/freelesson';
 homeOpenBtn.forEach(item => {
     item.addEventListener('click', () => {
         modalContainer.style.display = 'block';
+        document.body.style.overflow = 'hidden';
     });
 });
 
 aboutmeOpenBtn.forEach(item => {
     item.addEventListener('click', () => {
         modalContainer.style.display = 'block';
+        document.body.style.overflow = 'hidden';
     });
 });
 
 modalContainer.addEventListener('click', (e) => {
     if(e.target.localName === "img" || e.target.classList.contains('freelesson')) {
         modalContainer.style.display = 'none';
+        document.body.style.overflow = '';
     }
 });
 
